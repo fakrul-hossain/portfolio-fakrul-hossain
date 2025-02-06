@@ -22,42 +22,41 @@ This is my personal portfolio website, built to introduce myself, showcase my sk
 ```sh
 git clone https://github.com/fakrul-hossain/portfolio-fakrul-hossain
 cd portfolio-fakrul-hossain
-Install dependencies
-Using npm:
+```
 
-sh
-Copy
-Edit
+### Install dependencies
+
+Using npm:
+```sh
 npm install
-Or using Yarn:
+```
 
-sh
-Copy
-Edit
+Or using Yarn:
+```sh
 yarn install
-Start the development server
-Using npm:
+```
 
-sh
-Copy
-Edit
+### Start the development server
+
+Using npm:
+```sh
 npm start
-Or using Yarn:
+```
 
-sh
-Copy
-Edit
+Or using Yarn:
+```sh
 yarn start
-Build the project for production
+```
+
+### Build the project for production
+
 Using npm:
-
-sh
-Copy
-Edit
+```sh
 npm run build
-Or using Yarn:
+```
 
-sh
-Copy
-Edit
+Or using Yarn:
+```sh
 yarn build
+```
+
