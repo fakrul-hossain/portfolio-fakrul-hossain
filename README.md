@@ -1,16 +1,63 @@
 # Portfolio of Fakrul Hossain
 
-<img src ="https://i.ibb.co.com/RWnRr1F/Screenshot-61.png" />
- 
-This project was created with CRA (Create React App)
+![Portfolio Screenshot](https://i.ibb.co.com/RWnRr1F/Screenshot-61.png)
 
-This is my portfolio website to introduce myself, here I put my skills, projects, and contact details.
+This is my personal portfolio website, built to introduce myself, showcase my skills, highlight my projects, and provide contact details.
 
-## Technologies used:
+## 🚀 Technologies Used
 - React
-- Typescript
+- TypeScript
 - Styled Components
- 
-## To run this project:
-- yarn install
-- yarn run start"# portfolio-fakrul-hossain" 
+
+## 📌 Features
+- Fully responsive design
+- Smooth animations
+- Contact form with email integration
+- Projects showcase with descriptions
+- Skills and experience section
+
+## 🔧 Installation & Running the Project
+
+### Clone the repository
+```sh
+git clone https://github.com/fakrul-hossain/portfolio-fakrul-hossain
+cd portfolio-fakrul-hossain
+Install dependencies
+Using npm:
+
+sh
+Copy
+Edit
+npm install
+Or using Yarn:
+
+sh
+Copy
+Edit
+yarn install
+Start the development server
+Using npm:
+
+sh
+Copy
+Edit
+npm start
+Or using Yarn:
+
+sh
+Copy
+Edit
+yarn start
+Build the project for production
+Using npm:
+
+sh
+Copy
+Edit
+npm run build
+Or using Yarn:
+
+sh
+Copy
+Edit
+yarn build
