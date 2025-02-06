@@ -1,4 +1,4 @@
-# Portfolio of Vinayak Singh
+# Portfolio of Fakrul Hossain
 
 <img src ="https://i.ibb.co.com/1GmTLtjs/Screenshot-60.png" />
  
