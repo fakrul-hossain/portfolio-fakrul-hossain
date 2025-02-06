@@ -1,5 +1,5 @@
 import { Container } from "./styles";
-import VinayakSingh from "../../assets/VinayakSingh.webp";
+import FakrulHossain from "../../assets/fakrul_hossain.jpg";
 import wordpress from "../../assets/wordpress.svg";
 import shopify from "../../assets/shopify.svg";
 import htmlIcon from "../../assets/html-icon.svg";
@@ -7,7 +7,6 @@ import cssIcon from "../../assets/css-icon.svg";
 import jsIcon from "../../assets/js-icon.svg";
 import nodeIcon from "../../assets/node-icon.svg";
 import reactIcon from "../../assets/react-icon.svg";
-import typescriptIcon from "../../assets/typescript-icon.svg";
 import vueIcon from "../../assets/vue-icon.svg";
 import boostrapIcon from "../../assets/bootstrap-icon.svg";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -21,7 +20,7 @@ export function About() {
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInLeft" delay={0.1 * 1000}>
           <p>
-            Hi there! I'm Vinayak, a website developer with a passion for creating custom online experiences for my clients. With a skill set including HTML, CSS, JavaScript, and React, I have the tools to bring any website vision to life.
+            Hi there! I'm Fakrul Hossain, a website developer with a passion for creating custom online experiences for my clients. With a skill set including HTML, CSS,Tailwind,Bootstrap, JavaScript, and React, I have the tools to bring any website vision to life.
           </p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInLeft" delay={0.2 * 1000} style={{ marginTop: "2rem", marginBottom: "2rem" }}>
@@ -51,11 +50,7 @@ export function About() {
               <img src={reactIcon} alt="React" />
             </ScrollAnimation>
           </div>
-          <div className="hability">
-            <ScrollAnimation animateIn="fadeInUp" delay={0.14 * 1000}>
-              <img src={typescriptIcon} alt="Typescript" />
-            </ScrollAnimation>
-          </div>
+
           <div className="hability">
             <ScrollAnimation animateIn="fadeInUp" delay={0.15 * 1000}>
               <img src={vueIcon} alt="Vue" />
@@ -90,7 +85,11 @@ export function About() {
       </div>
       <div className="about-image">
         <ScrollAnimation animateIn="fadeInRight" delay={0.20 * 1000}>
-          <img src={VinayakSingh} alt="Vinayak Singh" />
+          <img style={{ 
+            width: "380px",
+            border: "4px solid #23CE6B",
+            borderRadius: "10px" 
+            }} src={FakrulHossain} alt="Fakrul Hossain" />
         </ScrollAnimation>
       </div>
     </Container>

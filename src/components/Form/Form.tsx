@@ -1,22 +1,18 @@
 import { Container, ContainerSucces } from './styles'
 import { useForm, ValidationError } from '@formspree/react'
 import { toast, ToastContainer } from 'react-toastify'
-import ReCAPTCHA from 'react-google-recaptcha'
 import { useEffect, useState } from 'react'
 import validator from 'validator'
 
 export function Form() {
   const [state, handleSubmit] = useForm('xknkpqry')
   const [validEmail, setValidEmail] = useState(false)
-  const [isHuman, setIsHuman] = useState(false)
   const [message, setMessage] = useState('')
+
   function verifyEmail(email: string) {
-    if (validator.isEmail(email)) {
-      setValidEmail(true)
-    } else {
-      setValidEmail(false)
-    }
+    setValidEmail(validator.isEmail(email)) // Directly setting state
   }
+
   useEffect(() => {
     if (state.succeeded) {
       toast.success('Email successfully sent!', {
@@ -27,7 +23,8 @@ export function Form() {
         toastId: 'succeeded',
       })
     }
-  })
+  }, [state.succeeded])
+
   if (state.succeeded) {
     return (
       <ContainerSucces>
@@ -43,6 +40,7 @@ export function Form() {
       </ContainerSucces>
     )
   }
+
   return (
     <Container>
       <h2>Get in touch using the form</h2>
@@ -52,35 +50,23 @@ export function Form() {
           id="email"
           type="email"
           name="email"
-          onChange={(e) => {
-            verifyEmail(e.target.value)
-          }}
+          onChange={(e) => verifyEmail(e.target.value)}
           required
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
+        
         <textarea
           required
           placeholder="Send a message to get started."
           id="message"
           name="message"
-          onChange={(e) => {
-            setMessage(e.target.value)
-          }}
+          onChange={(e) => setMessage(e.target.value.trim())} // Trim whitespace
         />
-        <ValidationError
-          prefix="Message"
-          field="message"
-          errors={state.errors}
-        />
-        <ReCAPTCHA
-          sitekey="6Lfj9NYfAAAAAP8wPLtzrsSZeACIcGgwuEIRvbSg"
-          onChange={(e) => {
-            setIsHuman(true)
-          }}
-        ></ReCAPTCHA>
+        <ValidationError prefix="Message" field="message" errors={state.errors} />
+
         <button
           type="submit"
-          disabled={state.submitting || !validEmail || !message || !isHuman}
+          disabled={state.submitting || !validEmail || message.length === 0} // Ensure message isn't empty
         >
           Submit
         </button>
